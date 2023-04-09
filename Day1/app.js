@@ -52,6 +52,29 @@ function bai2() {
   console.log(arrayObject);
 }
 
+let arrayPerson = [
+  {
+    name: "Vinh",
+    age: 15,
+  },
+  {
+    name: "Lâm",
+    age: 14,
+  },
+  {
+    name: "Đức Anh",
+    age: 12,
+  },
+  {
+    name: "Quý",
+    age: 18,
+  },
+  {
+    name: "Việt Anh",
+    age: 1,
+  },
+];
+
 // let tenCauBai = prompt("Enter bai ");
 // if (tenCauBai == 1) {
 //   bai1();
