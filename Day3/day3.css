@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.input_container {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  background-color: rgb(214, 204, 190);
+  margin: 20px auto 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.input_container input {
+  width: 80%;
+  padding: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input_container button {
+  width: 20%;
+  padding: 14px;
+  font-size: 14px;
+  color: white;
+  background-color: rgb(88, 173, 88);
+}
+
+.input_container button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.container_content {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(214, 204, 190);
+  margin: 20px auto 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background-color: rgb(145, 129, 129);
+  margin-bottom: 10px;
+  color: white;
+}
+
+.item span {
+  background-color: rgb(122, 182, 122);
+  padding: 14px;
+  width: 7%;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  padding: 14px;
+  background-color: rgb(117, 84, 117);
+  width: 85%;
+}
+
+.item .remove {
+  background-color: rgb(143, 65, 65);
+  padding: 14px;
+  width: 7%;
+  text-align: center;
+}
+
+.item .remove:hover {
+  background-color: rgb(113, 16, 16);
+  cursor: pointer;
+}
