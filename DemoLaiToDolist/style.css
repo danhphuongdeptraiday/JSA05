@@ -5,7 +5,7 @@
 }
 
 .input_container {
-  width: 700px;
+  width: 50%;
   padding: 30px;
   display: flex;
   background-color: rgb(214, 204, 190);
@@ -34,7 +34,7 @@
 }
 
 .container_content {
-  width: 700px;
+  width: 50%;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -78,33 +78,4 @@
 .item .remove:hover {
   background-color: rgb(113, 16, 16);
   cursor: pointer;
-}
-
-.notification {
-  width: 350px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border-radius: 20px;
-  position: fixed;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  display: none;
-}
-
-.notification img {
-  width: 100px;
-  height: 100px;
-  display: block;
-  margin: 0 auto 30px;
-}
-
-.notification p {
-  font-weight: 600;
-  font-size: 18px;
 }
