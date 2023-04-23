@@ -10,12 +10,18 @@
 // });
 // console.log("Name dc lấy từ localStorage: " + nameFromLocalStorage);
 
-let inputName = document.querySelector("#inputName");
+// Nguyên tắc: Khi set Value vào trong localStorage nếu dữ liệu chúng ta lưu là dạng Oject hoặc array => Phải dùng dùng JSON.stringify() giá trị đó trước
+// rồi mới lưu vào localStorage
+// let getValue = localStorage.getItem("StudentOfMindx"); // => JSON.parse(localStorage.getItem("StudentOfMindx"))
+
+let inputName = document.getElementById("inputName");
+let inputAge = document.getElementById("inputAge");
+let inputUniversity = document.getElementById("inputUniversity");
 
 let student = {
-  id: 1,
   name: "Phương",
   age: 22,
+  university: "Hanu",
 };
 
 // let name = "Phương";
@@ -25,17 +31,33 @@ console.log(student);
 // console.log(t);
 // console.log(t[2]);
 
-// Nguyên tắc: Khi set Value vào trong localStorage nếu dữ liệu chúng ta lưu là dạng Oject hoặc array => Phải dùng dùng JSON.stringify() giá trị đó trước
-// rồi mới lưu vào localStorage
 localStorage.setItem("StudentOfMindx", JSON.stringify(student));
 
 let btnSave = document.querySelector("button");
 btnSave.addEventListener("click", function () {
-  // let getValue = localStorage.getItem("StudentOfMindx"); // => JSON.parse(localStorage.getItem("StudentOfMindx"))
-  let personLocalStorage = JSON.parse(localStorage.getItem("StudentOfMindx")); // => ĐỐi tương
-  console.log("Value từ input = " + inputName.value);
-  personLocalStorage.name = inputName.value;
-
-  localStorage.setItem("StudentOfMindx", JSON.stringify(personLocalStorage));
+  let check =
+    inputName.value != "" &&
+    inputAge.value != "" &&
+    inputUniversity.value != "";
+  // console.log("Check = " + check);
+  // Check điều kiện
+  console.log(inputName == "" && inputAge == "" && inputUniversity == "");
+  if (check) {
+    let personLocalStorage = JSON.parse(localStorage.getItem("StudentOfMindx")); // => ĐỐi tương
+    console.log("Value từ input = " + inputName.value);
+    personLocalStorage.name = inputName.value;
+    personLocalStorage.age = inputAge.value;
+    personLocalStorage.university = inputUniversity.value;
+    localStorage.setItem("StudentOfMindx", JSON.stringify(personLocalStorage));
+    inputName.value = "";
+    inputAge.value = "";
+    inputUniversity.value = "";
+  } else {
+    if (inputName.value == "" && inputAge.value == "") {
+      alert("Bạn còn đang nhập thiếu inputName và inputAge");
+    } else if (inputName.value == "" && inputUniversity.value == "") {
+      alert("Bạn còn đang nhập thiếu inputName và inputUniversity");
+    }
+  }
 });
-// string -> object: JSON.parse()
+//Lấy đối string -> object: JSON.parse()
