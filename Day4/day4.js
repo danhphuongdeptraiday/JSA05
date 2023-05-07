@@ -18,14 +18,6 @@ let inputName = document.getElementById("inputName");
 let inputAge = document.getElementById("inputAge");
 let inputUniversity = document.getElementById("inputUniversity");
 
-// let student = {
-//   name: "Phương",
-//   age: 22,
-//   university: "Hanu",
-// };
-// console.log(student);
-// localStorage.setItem("StudentOfMindx", JSON.stringify([]));
-
 let btnSave = document.querySelector("button");
 
 // Tạo 1 mảng rỗng trong localStorage
@@ -58,14 +50,6 @@ if (checkLocal == null) {
       "Array person",
       JSON.stringify(getArrayPersonFromLocalStorage)
     );
-
-    // if (check) {
-    //   let personLocalStorage = JSON.parse(localStorage.getItem("StudentOfMindx")); // => ĐỐi tương
-    //   personLocalStorage.name = inputName.value;
-    //   personLocalStorage.age = inputAge.value;
-    //   personLocalStorage.university = inputUniversity.value;
-    //   // Sau khi gán xong thì lại thêm mới vào
-    //   localStorage.setItem("StudentOfMindx", JSON.stringify(personLocalStorage));
     inputName.value = "";
     inputAge.value = "";
     inputUniversity.value = "";
