@@ -18,46 +18,58 @@ let inputName = document.getElementById("inputName");
 let inputAge = document.getElementById("inputAge");
 let inputUniversity = document.getElementById("inputUniversity");
 
-let student = {
-  name: "Phương",
-  age: 22,
-  university: "Hanu",
-};
-
-// let name = "Phương";
-// console.log(name[1]);
-console.log(student);
-// let t = JSON.stringify(student);
-// console.log(t);
-// console.log(t[2]);
-
-localStorage.setItem("StudentOfMindx", JSON.stringify(student));
+// let student = {
+//   name: "Phương",
+//   age: 22,
+//   university: "Hanu",
+// };
+// console.log(student);
+// localStorage.setItem("StudentOfMindx", JSON.stringify([]));
 
 let btnSave = document.querySelector("button");
-btnSave.addEventListener("click", function () {
-  let check =
-    inputName.value != "" &&
-    inputAge.value != "" &&
-    inputUniversity.value != "";
-  // console.log("Check = " + check);
-  // Check điều kiện
-  console.log(inputName == "" && inputAge == "" && inputUniversity == "");
-  if (check) {
-    let personLocalStorage = JSON.parse(localStorage.getItem("StudentOfMindx")); // => ĐỐi tương
-    console.log("Value từ input = " + inputName.value);
-    personLocalStorage.name = inputName.value;
-    personLocalStorage.age = inputAge.value;
-    personLocalStorage.university = inputUniversity.value;
-    localStorage.setItem("StudentOfMindx", JSON.stringify(personLocalStorage));
+
+// Tạo 1 mảng rỗng trong localStorage
+let checkLocal = JSON.parse(localStorage.getItem("Array person"));
+// console.log(checkLocal);
+if (checkLocal == null) {
+  let emptyArray = [];
+  localStorage.setItem("Array person", JSON.stringify(emptyArray));
+  window.location.reload();
+} else {
+  btnSave.addEventListener("click", function () {
+    let check =
+      inputName.value != "" &&
+      inputAge.value != "" &&
+      inputUniversity.value != "";
+
+    // Tạo đối tượng mới
+    let newPerson = {
+      name: inputName.value,
+      age: inputAge.value,
+      university: inputUniversity.value,
+    };
+
+    // Thêm đối tượng mới vừa được tạo và cái mảng được set ở dòng 32
+    let getArrayPersonFromLocalStorage = JSON.parse(
+      localStorage.getItem("Array person")
+    );
+    getArrayPersonFromLocalStorage.push(newPerson);
+    localStorage.setItem(
+      "Array person",
+      JSON.stringify(getArrayPersonFromLocalStorage)
+    );
+
+    // if (check) {
+    //   let personLocalStorage = JSON.parse(localStorage.getItem("StudentOfMindx")); // => ĐỐi tương
+    //   personLocalStorage.name = inputName.value;
+    //   personLocalStorage.age = inputAge.value;
+    //   personLocalStorage.university = inputUniversity.value;
+    //   // Sau khi gán xong thì lại thêm mới vào
+    //   localStorage.setItem("StudentOfMindx", JSON.stringify(personLocalStorage));
     inputName.value = "";
     inputAge.value = "";
     inputUniversity.value = "";
-  } else {
-    if (inputName.value == "" && inputAge.value == "") {
-      alert("Bạn còn đang nhập thiếu inputName và inputAge");
-    } else if (inputName.value == "" && inputUniversity.value == "") {
-      alert("Bạn còn đang nhập thiếu inputName và inputUniversity");
-    }
-  }
-});
-//Lấy đối string -> object: JSON.parse()
+    // }
+  });
+  //Lấy đối string -> object: JSON.parse()
+}
