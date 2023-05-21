@@ -18,19 +18,8 @@
   font-size: 32px;
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    /* visibility: hidden; */
-  }
-
-  .box1 {
-    width: 100%;
-  }
-
-  .box2 {
-    width: 100%;
-  }
+.fa-bars {
+  display: none;
 }
 
 * {
@@ -71,4 +60,39 @@
 
 .search:hover {
   background-color: rgb(212, 79, 79);
+}
+
+.toggle {
+  background-color: red;
+}
+
+@media screen and (max-width: 630px) {
+  .container {
+    flex-direction: column;
+    /* visibility: hidden; */
+  }
+
+  .box1 {
+    width: 100%;
+  }
+
+  .box2 {
+    width: 100%;
+  }
+
+  .fa-magnifying-glass {
+    display: none;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  .item_container {
+    display: none;
+  }
+
+  .navigation {
+    justify-content: flex-end;
+  }
 }
