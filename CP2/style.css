@@ -1,0 +1,86 @@
+.container {
+  width: 1200px;
+  height: 280px;
+  background-color: rgb(248, 248, 248);
+  border: solid;
+  margin-top: 300px;
+  margin-left: 400px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.small {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  color: rgb(1, 1, 1);
+}
+
+#second {
+  position: absolute;
+  top: 335px;
+  left: 1460px;
+  color: rgb(251, 250, 250);
+  font-size: 90px;
+  font-family: "Cairo", sans-serif;
+}
+
+.seconds {
+  margin-top: 50px;
+  font-size: 10px;
+  color: grey;
+  font-family: "Cairo", sans-serif;
+}
+
+.minutes {
+  margin-top: 50px;
+  font-size: 10px;
+  color: grey;
+  font-family: "Cairo", sans-serif;
+}
+#minute {
+  position: absolute;
+  top: 335px;
+  left: 1120px;
+  color: rgb(247, 241, 241);
+  font-size: 90px;
+  font-family: "Cairo", sans-serif;
+}
+
+.hours {
+  margin-top: 50px;
+  font-size: 10px;
+  color: grey;
+  font-family: "Cairo", sans-serif;
+}
+
+#hour {
+  position: absolute;
+  top: 335px;
+  left: 780px;
+  color: rgb(255, 252, 252);
+  font-size: 90px;
+  font-family: "Cairo", sans-serif;
+}
+.l {
+  color: grey;
+  font-size: 60px;
+}
+
+.days {
+  margin-top: 50px;
+  font-size: 10px;
+  color: grey;
+  margin-left: 40px;
+  font-family: "Cairo", sans-serif;
+}
+
+#day {
+  position: absolute;
+  top: 335px;
+  left: 480px;
+  color: rgb(255, 255, 255);
+  font-size: 90px;
+  font-family: "Cairo", sans-serif;
+}

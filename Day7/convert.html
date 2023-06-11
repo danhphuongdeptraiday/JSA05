@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: rgb(178, 196, 212);
+      }
+      .container {
+        width: 60%;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        padding: 20px;
+        border: 5px dashed black;
+        position: relative;
+      }
+
+      .left_side,
+      .right_side {
+        width: 45%;
+        height: 80%;
+      }
+
+      textarea {
+        width: 100%;
+        height: 80%;
+        outline: none;
+        padding: 10px;
+      }
+
+      #convertBtn {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: gray;
+        padding: 15px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="margin: 50px; text-align: center">
+      <span style="color: red"> LOWERCASE </span>
+      <span style="color: yellow"> TO </span>
+      <span style="color: blue"> UPPERCASE </span>
+      <span style="color: green"> APP </span>
+    </h1>
+    <div class="container">
+      <div class="left_side">
+        <h2 style="color: red">Enter text</h2>
+        <textarea placeholder="My text"></textarea>
+      </div>
+
+      <div class="right_side">
+        <h2 style="color: blue">Result</h2>
+        <textarea placeholder="Result"></textarea>
+      </div>
+
+      <button id="convertBtn">Convert</button>
+    </div>
+  </body>
+</html>

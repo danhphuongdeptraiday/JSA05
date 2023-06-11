@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Chuỗi cần check : <b>Hello</b></p>
+    <input type="text" />
+    <button>Click</button>
+    <h1>Kết Quả: <span></span></h1>
+    <script>
+      let input = document.querySelector("input");
+      let btn = document.querySelector("button");
+      let inputValue = document.querySelector("input");
+      console.log(inputValue); // Lấy được ngay khi refresh trang
+      let result = document.querySelector("span");
+      let s = document.querySelector("b").innerText;
+      s = s.toUpperCase();
+
+      input.addEventListener("keyup", function (event) {
+        // if (event.key === "Enter") {
+        //   event.preventDefault();
+
+        // }
+        let t = inputValue.value.toUpperCase();
+
+        console.log(t);
+        if (s.indexOf(t) > -1) {
+          result.innerText = "True";
+        } else {
+          result.innerText = "False";
+        }
+      });
+      //   console.log(s);
+      // indexOf("n"): dùng tìm xem ký tự n nằm ở vị trí nào trong string
+      let position = s.indexOf("H");
+
+      //   console.log(position);
+    </script>
+  </body>
+</html>
