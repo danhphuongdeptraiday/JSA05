@@ -1,0 +1,64 @@
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 100vw;
+  overflow: hidden;
+}
+.logo {
+  font-size: 30px;
+}
+
+.nav-links a {
+  color: #407b77;
+}
+.logo {
+  font-size: 32px;
+}
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 25px;
+  margin-left: 100px;
+}
+.menu li:hover {
+  background-color: #c5a7a7;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(249, 255, 255);
+  color: #1a373e;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100vw;
+  z-index: 10;
+  height: 85px;
+  font-family: cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.khampha {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  font-size: 25px;
+  color: rgb(47, 179, 179);
+}
