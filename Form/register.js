@@ -1,7 +1,7 @@
 let usernameInput = document.querySelector("#username");
 let passwordInput = document.querySelector("#password");
 
-let buttonLogin = document.querySelector("#registerButton");
+let registerButton = document.querySelector("#registerButton");
 
 let arrayPerson = [];
 let getListUser = JSON.parse(localStorage.getItem("ListUser"));
@@ -9,7 +9,7 @@ if (getListUser == null) {
   localStorage.setItem("ListUser", JSON.stringify([]));
   window.location.reload();
 } else {
-  buttonLogin.addEventListener("click", function () {
+  registerButton.addEventListener("click", function () {
     if (getListUser.length < 1) {
       console.log("Hello");
       getListUser.push({
