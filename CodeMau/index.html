@@ -24,12 +24,14 @@
       }
 
       .cart_container {
-        width: 350px;
+        width: 550px;
         height: 100vh;
         background-color: rgb(120, 144, 166);
         position: fixed;
         top: 0;
         right: 0;
+        overflow: scroll;
+        overflow-x: hidden;
       }
 
       .item_at_cart {
@@ -41,6 +43,19 @@
         border: 2px solid black;
         padding-right: 10px;
       }
+
+      .item_at_cart img {
+        width: 200px;
+      }
+
+      .product img {
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: rgb(200, 173, 173);
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -50,22 +65,42 @@
 
     <div class="container">
       <div class="product" id="1" place="vietnam">
+        <img
+          src="https://vnn-imgs-f.vgcloud.vn/2021/10/27/09/dep-nao-long-mua-thu-ha-noi.jpg"
+          alt=""
+        />
         <h1 class="title">Hà Nội</h1>
         <button>Add to cart</button>
       </div>
       <div class="product" id="2" place="vietnam">
+        <img
+          src="https://vietnam.travel/sites/default/files/styles/article_photo_large/public/2017-11/things%20to%20do%20in%20hcmc-3.jpg?itok=7TX7muVt"
+          alt=""
+        />
         <h1 class="title">Hồ Chí Minh</h1>
         <button>Add to cart</button>
       </div>
       <div class="product" id="3" place="vietnam">
+        <img
+          src="https://danangfantasticity.com/wp-content/uploads/2015/10/bien-danang.jpg"
+          alt=""
+        />
         <h1 class="title">Đà Nẵng</h1>
         <button>Add to cart</button>
       </div>
       <div class="product" id="4" place="america">
+        <img
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c5/7c/68/caption.jpg?w=1400&h=900&s=1&cx=950&cy=1766&chk=v1_9ee2771da71f55a7ac6a"
+          alt=""
+        />
         <h1 class="title">New York</h1>
         <button>Add to cart</button>
       </div>
       <div class="product" id="5" place="america">
+        <img
+          src="https://ik.imagekit.io/tvlk/blog/2022/07/kinh-nghiem-du-lich-ha-long-1-1024x600.jpg?tr=dpr-2,w-675"
+          alt=""
+        />
         <h1 class="title">San Francisco</h1>
         <button>Add to cart</button>
       </div>
@@ -75,8 +110,12 @@
       <h1>List cart here</h1>
       <div class="list_item_container">
         <div class="item_at_cart">
+          <img
+            src="https://ik.imagekit.io/tvlk/blog/2022/07/kinh-nghiem-du-lich-ha-long-1-1024x600.jpg?tr=dpr-2,w-675"
+            alt=""
+          />
           <h2>Ha noi</h2>
-          <div class="deleteButon">X</div>
+          <div class="deleteButton">X</div>
         </div>
       </div>
     </div>
